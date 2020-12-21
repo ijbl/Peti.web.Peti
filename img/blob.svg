@@ -1,0 +1,7 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <linearGradient spreadMethod="pad" id="gradient" x1="0%" y1="0%" x2="126%" y2="55%">
+    <stop offset="0%" style="stop-color:rgb(95, 117, 247);stop-opacity:1;" />
+	<stop offset="100%" style="stop-color:rgb(121, 240, 251);stop-opacity:1;" />
+  </linearGradient>
+  <path fill="url(#gradient)" d="M38.4,-44.9C53.3,-33.2,71.4,-24.5,77,-10.9C82.6,2.8,75.8,21.3,63.2,30.3C50.6,39.2,32.2,38.7,16.9,42.6C1.6,46.5,-10.7,54.9,-27.2,56.7C-43.6,58.5,-64.2,53.7,-73.3,40.9C-82.5,28,-80.2,7.1,-75.7,-12.5C-71.3,-32.2,-64.7,-50.7,-51.7,-62.8C-38.7,-74.9,-19.3,-80.5,-3.8,-76C11.7,-71.4,23.4,-56.7,38.4,-44.9Z" transform="translate(100 100)" />
+</svg>
