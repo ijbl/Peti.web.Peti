@@ -39,11 +39,33 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
   
-  // Initialize Swiper
+  // Initialize Swipers
+  var swiperPhone = new Swiper('.swiper-phone', {
+      /*pagination: {
+        el: '.swiper-pagination',
+      },*/
+    });
+  
   var swiper = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
+        clickable: true
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
     });
+  
+  swiper.on('slideChange', function () {
+    var i = swiper.activeIndex;
+    swiperPhone.slideTo(i);
+    console.log('slide changed to'+i);
+  });
+  
+  swiperPhone.on('slideChange', function () {
+    var i = swiperPhone.activeIndex;
+    swiper.slideTo(i);
+  });
 
 })(jQuery); // End of use strict

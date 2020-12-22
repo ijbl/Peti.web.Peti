@@ -417,6 +417,10 @@ section.download .badges .badge-link img {
   }
 }
 
+#features {
+  padding: 70px 0 !important;
+}
+
 section.features .section-heading {
   margin-bottom: 100px;
 }
@@ -459,7 +463,7 @@ section.features .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;
-  background: linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to bottom, var(--ion-color-tertiary), var(--ion-color-primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -632,6 +636,17 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     margin: 0 auto;
 }
 
+.feature-item {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  max-width: 380px !important;
+  
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
 div.container {
   align-items: baseline !important;
 }
@@ -690,3 +705,11 @@ div.container-wave {
   -webkit-align-items: center;
   align-items: center;
 }
+
+.small-text{
+  color: rgba(57, 57, 57, 0.5) !important;
+  font-size: 0.75rem !important;
+  font-style: italic !important;
+  margin-top: 0.5rem !important;
+}
+
