@@ -26,10 +26,19 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+  <!-- CSS Animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- Custom styles for this template -->
   <link href="css/new-age.css" rel="stylesheet">
-  
+
   <link href="css/iconmoon-fonts.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+  <!-- Style The Contact Form -->
+  <link rel="stylesheet" href="css/email-form.css">
 
 </head>
 
@@ -67,20 +76,20 @@
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-lg-7 my-auto">
-          <div class="header-content mx-auto">
-            <!--<h1 class="mb-5">New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>-->
-            <h1 class="has-foreground-dark-color" style="line-height:1.8;">Bienvenido a Peti</h1>
-            <p style="font-size:18px;line-height:1.6;">Peti es una aplicación móvil gratuita en la que puedes ayudar a animales necesitados. Crea reportes, realiza búsquedas, guárdalas y recibe notificaciones de nuevos resultados. Identifica a tu mascota perdida con el código Peti, si alguien la encuentra podrá escanear el código en la app y comunicarse contigo.</p>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Descárgala ahora!</a>
+          <div class="header-content mx-auto ">
+            <div id="peti-description-container">
+              <h1 class="has-foreground-dark-color" style="line-height:1.8;">Bienvenido a Peti</h1>
+              <p style="font-size:18px;line-height:1.6;">Peti es una aplicación móvil gratuita en la que puedes ayudar a animales necesitados. Crea reportes, realiza búsquedas, guárdalas y recibe notificaciones de nuevos resultados. Identifica a tu mascota perdida con el código Peti, si alguien la encuentra podrá escanear el código en la app y comunicarse contigo.</p>
+            </div>
+            <a id="download_btn" href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Descárgala ahora!</a>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
-          <div class="device-container">
+          <div id="device-top" class="device-container">
             <div class="device-mockup iphone6_plus portrait white">
               <div class="device">
                 <div class="screen">
                   <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <!--<img src="img/demo-screen-1.jpg" class="img-fluid" alt="">-->
                   <img src="img/screens/home.png" class="img-fluid" alt="">
                 </div>
                 <div class="button">
@@ -98,13 +107,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 mx-auto">
-          <h2 class="section-heading">¡Descubre cómo puedes ayudar!</h2>
-          <p>Peti está disponible para iOS y Android. Descárgala ahora y empieza a ayudar a mascotas necesitadas.</p>
-          <div class="badges">
+          <h2 id="download-title" class="section-heading">¡Descubre cómo puedes ayudar!</h2>
+          <p id="download-text">Peti está disponible para iOS y Android. Descárgala ahora y empieza a ayudar a mascotas necesitadas.</p>
+          <div id="download-badges" class="badges">
             <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
             <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
           </div>
-          <div class="small-text">* Requiere Android OS 4.3+ or Apple iOS 9.3+</div>
+          <div id="download-smalltext" class="small-text">* Requiere Android OS 4.3+ or Apple iOS 9.3+</div>
         </div>
       </div>
     </div>
@@ -118,14 +127,12 @@
         <hr>
       </div>-->
       <div class="row">
-        <div class="col-lg-4 my-auto">
+        <div class="col-lg-4 my-auto" id="features-device">
           <div class="device-container">
             <div class="device-mockup iphone6_plus portrait white">
               <div class="device">
                 <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <!--<img src="img/demo-screen-1.jpg" class="img-fluid" alt="">-->
-
+                  <!-- Demo image for screen mockup -->
                   <!-- Swiper -->
                   <div class="swiper-phone">
                     <div class="swiper-wrapper">
@@ -135,16 +142,8 @@
                       <div class="swiper-slide"><img src="img/screens/codigopeti.png" class="img-fluid" alt=""></div>
                       <div class="swiper-slide"><img src="img/screens/mypets.png" class="img-fluid" alt=""></div>
                       <div class="swiper-slide"><img src="img/screens/favorites.png" class="img-fluid" alt=""></div>
-                      <!--<div class="swiper-slide">Slide 7</div>
-                          <div class="swiper-slide">Slide 8</div>
-                          <div class="swiper-slide">Slide 9</div>
-                          <div class="swiper-slide">Slide 10</div>-->
                     </div>
-                    <!-- Add Pagination -->
-                    <!--<div class="swiper-pagination"></div>-->
                   </div>
-
-
 
                 </div>
                 <div class="button">
@@ -154,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-8 my-auto" style="margin-top: 0 !important;">
+        <div class="col-lg-8 my-auto" style="margin-top: 0 !important;" id="features-description">
           <div class="container-fluid">
             <div class="section-heading text-center" style="margin-bottom: 0 !important">
               <h2>Conoce más sobre Peti</h2>
@@ -165,7 +164,6 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="feature-item feature-peti">
-                    <!--<img src="img/appIcons_ionic4/ios-home.svg" class="text-primary">-->
                     <i aria-hidden="true" data-icon="&#xe001;" class="icon-ios-home"></i>
                     <h3>Inicio</h3>
                     <p class="text-muted">No más búsquedas sin sentido entre miles de grupos de redes sociales.<br>Peti te muestra los reportes más recientes de mascotas necesitadas de una manera clasificada y ordenada. <br><br></p>
@@ -213,63 +211,13 @@
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
-
-            <!-- Swiper JS -->
-            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-            <!--<div class="row">
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-home text-primary"></i>
-                  <h3>Inicio</h3>
-                  <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-camera text-primary"></i>
-                  <h3>Reportes</h3>
-                  <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-screen-smartphone text-primary"></i>
-                  <h3>Búsquedas y Filtros</h3>
-                  <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-present text-primary"></i>
-                  <h3>Código Peti</h3>
-                  <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-lock-open text-primary"></i>
-                  <h3>Mis Mascotas</h3>
-                  <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="feature-item">
-                  <i class="icon-screen-smartphone text-primary"></i>
-                  <h3>Mis Favoritos</h3>
-                  <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                </div>
-              </div>
-            </div>-->
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
+  <!--<section class="cta">
     <div class="cta-content">
       <div class="container">
         <h2>Stop waiting.<br>Start building.</h2>
@@ -277,42 +225,108 @@
       </div>
     </div>
     <div class="overlay"></div>
-  </section>
+  </section>-->
 
-  <section class="contact bg-primary" id="contact">
+  <section class="contact" id="contact">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
+      <path fill-opacity="1" d="M0,192L80,160C160,128,320,64,480,80C640,96,800,192,960,208C1120,224,1280,160,1360,128L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+    </svg>
+
     <div class="container">
-      <h2>We
-        <i class="fas fa-heart"></i>
-        new friends!</h2>
-      <ul class="list-inline list-social">
-        <li class="list-inline-item social-twitter">
-          <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-facebook">
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <!--<li class="list-inline-item social-google-plus">
-          <a href="#">
-            <i class="fab fa-google-plus-g"></i>
-          </a>
-        </li>-->
+      <div class="row">
+        <div class="col-lg-6 my-auto" id="contact-left">
+          <div class="section-heading text-left">
+            <h2>Ponte en contacto</h2>
+            <p>Si tienes dudas o sugerencias por favor ponte en contacto con nosotros.</p>
+            <hr>
+            <ul class="list-inline list-social" id="contact-buttons">
+              <li class="list-inline-item social-facebook grow">
+                <a href="#" class="text-center">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item social-twitter grow">
+                <a href="#" class="text-center">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
             </ul>
           </div>
+        </div>
+        <div class="col-lg-6 my-auto" style="margin-top: 0 !important;" id="contact-right">
+          <div class="container-form">
+            <!-- START HERE -->
+
+            <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycby9OHaEwl6FtUWIqH_aHLMouYZbnwCFYvPFXoSlGQ/exec">
+              <!-- change the form action to your script url -->
+
+              <div class="form-elements">
+                <fieldset class="pure-group">
+                  <label for="name">Nombre: <span>(obligatorio)</span></label>
+                  <input id="name" name="name" placeholder="Tu Nombre" />
+                </fieldset>
+
+                <fieldset class="pure-group">
+                  <label for="message">Mensaje: </label>
+                  <textarea id="message" name="message" rows="5" placeholder="Dinos tu mensaje..."></textarea>
+                </fieldset>
+
+                <fieldset class="pure-group">
+                  <label for="email">correo: <span>(obligatorio)</span></label>
+                  <input id="email" name="email" type="email" value="" required placeholder="tu.correo@email.com" />
+                </fieldset>
+
+                <fieldset class="pure-group ohnopot-field">
+                  <input id="ohnopot" type="text" name="ohnopot" value="" />
+                </fieldset>
+
+                <button class="button-success pure-button button-xlarge">
+                  <i class="fa fa-paper-plane"></i>&nbsp;Enviar</button>
+              </div>
+
+              <!-- Thankyou Message when submitting the form: -->
+              <div class="thankyou_message" style="display:none;">
+                <p><em>¡Gracias</em> por contactarnos!</p>
+              </div>
+
+            </form>
+
+            <!-- END -->
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal-long" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="font-weight: bold; color: var(--ion-text-color)"><span id="modal-title">Aviso de Privacidad</span></h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
       <p>&copy; Peti 2020. Derechos Reservados.</p>
       <ul class="list-inline">
         <li class="list-inline-item">
-          <a href="#">Aviso de Privacidad</a>
+          <a href="aviso.html" id="aviso-privacidad">Aviso de Privacidad</a>
         </li>
         <li class="list-inline-item">
-          <a href="#">Términos y Condiciones</a>
+          <a href="terminos.html" id="terminos">Términos y Condiciones</a>
         </li>
         <!--<li class="list-inline-item">
           <a href="#">FAQ</a>
@@ -328,10 +342,18 @@
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- waypoints -->
+  <!--<script src="/vendor/waypoints/noframework.waypoints.min.js"></script>-->
+  <script src="/vendor/waypoints/jquery.waypoints.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <!-- Custom scripts for this template -->
   <!--<script src="js/new-age.min.js"></script>-->
   <script src="js/new-age.js"></script>
 
-</body>
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 
-</html>
+</body></html>
