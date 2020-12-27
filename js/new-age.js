@@ -76,6 +76,7 @@
   var downloadBtn = $('#download_btn');
   downloadBtn.addClass('animate__animated animate__fadeInUp');
   $('#device-top').addClass('animate__animated animate__fadeInRight');
+  $('#panda').addClass('animate__animated animate__bounceInDown animate__delay-1s');
 
   // hide our element on page load
   var downloadContainer = $('#download');
@@ -145,5 +146,9 @@
     $('#modal-title').replaceWith( '<span id="modal-title">Términos y Condiciones</span>' );
     $('#modal-long').modal('show').find('.modal-body').load($(this).attr('href'));
   });
+  
+  
+  /*$("input[required], select[required]").attr("oninvalid", "this.setCustomValidity('¡Campo obligatorio!')");
+  $("input[required], select[required]").attr("oninput", "setCustomValidity('')");*/
 
 })(jQuery); // End of use strict

@@ -76,9 +76,14 @@
     <div class="container h-100">
       <div class="row h-100">
         <div class="col-lg-7 my-auto">
+          <div class="panda-container">
+            <img src="img/petiPanda.svg" alt="Peti Logo" id="panda">
+          </div>
+          
           <div class="header-content mx-auto ">
+            
             <div id="peti-description-container">
-              <h1 class="has-foreground-dark-color" style="line-height:1.8;">Bienvenido a Peti</h1>
+              <h1 class="has-foreground-dark-color" id="welcome-title">Bienvenido a Peti</h1>
               <p style="font-size:18px;line-height:1.6;">Peti es una aplicación móvil gratuita en la que puedes ayudar a animales necesitados. Crea reportes, realiza búsquedas, guárdalas y recibe notificaciones de nuevos resultados. Identifica a tu mascota perdida con el código Peti, si alguien la encuentra podrá escanear el código en la app y comunicarse contigo.</p>
             </div>
             <a id="download_btn" href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Descárgala ahora!</a>
@@ -139,7 +144,7 @@
                       <div class="swiper-slide"><img src="img/screens/home.png" class="img-fluid" alt=""></div>
                       <div class="swiper-slide"><img src="img/screens/reports.png" class="img-fluid" alt=""></div>
                       <div class="swiper-slide"><img src="img/screens/search.png" class="img-fluid" alt=""></div>
-                      <div class="swiper-slide"><img src="img/screens/codigopeti.png" class="img-fluid" alt=""></div>
+                      <!--<div class="swiper-slide"><img src="img/screens/codigopeti.png" class="img-fluid" alt=""></div>-->
                       <div class="swiper-slide"><img src="img/screens/mypets.png" class="img-fluid" alt=""></div>
                       <div class="swiper-slide"><img src="img/screens/favorites.png" class="img-fluid" alt=""></div>
                     </div>
@@ -183,13 +188,13 @@
                     <p class="text-muted">Con las búsquedas de Peti encuentra exactamente lo que quieres y visualiza resultados cercanos a tu zona. <br>Guarda tus búsquedas y recibe notificaciones de nuevos resultados. <br>¡Peti sigue buscando por tí!.</p>
                   </div>
                 </div>
-                <div class="swiper-slide">
+                <!--<div class="swiper-slide">
                   <div class="feature-item">
                     <i aria-hidden="true" data-icon="&#xe001;" class="icon-qr-code-sharp"></i>
                     <h3>Código Peti</h3>
                     <p class="text-muted">Protege a tu mascota con una placa con código Peti. Si se extravía y alguien más la encuentra podrá escanear el código en la app y comunicarse contigo.<br>El código Peti es un código QR que se le asigna al dar de alta a tu mascota en la app.<br>Puedes descargar el código completamente gratis e imprimirlo en su collar o en algún lugar visible. También puedes adquirir para tu mascota una placa impresa con el código Peti <strong>aquí</strong>.</p>
                   </div>
-                </div>
+                </div>-->
                 <div class="swiper-slide">
                   <div class="feature-item">
                     <i aria-hidden="true" data-icon="&#xe001;" class="icon-ios-paw"></i>
@@ -257,13 +262,15 @@
           <div class="container-form">
             <!-- START HERE -->
 
-            <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycby9OHaEwl6FtUWIqH_aHLMouYZbnwCFYvPFXoSlGQ/exec">
+            <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycby9OHaEwl6FtUWIqH_aHLMouYZbnwCFYvPFXoSlGQ/exec" name="contact-form">
               <!-- change the form action to your script url -->
 
               <div class="form-elements">
                 <fieldset class="pure-group">
                   <label for="name">Nombre: <span>(obligatorio)</span></label>
-                  <input id="name" name="name" placeholder="Tu Nombre" />
+                  <input id="name" name="name" placeholder="Tu Nombre" required type="text" />
+                  <!-- oninvalid="this.setCustomValidity('Enter User Name Here')"
+  oninput="this.setCustomValidity('')" -->
                 </fieldset>
 
                 <fieldset class="pure-group">
@@ -348,6 +355,9 @@
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- jquery validation -->
+  <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <!--<script src="js/new-age.min.js"></script>-->

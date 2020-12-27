@@ -87,14 +87,14 @@
     xhr.send(encoded);
   }
   
-  function loaded() {
+  /*function loaded() {
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {
       forms[i].addEventListener("submit", handleFormSubmit, false);
     }
   };
-  document.addEventListener("DOMContentLoaded", loaded, false);
+  document.addEventListener("DOMContentLoaded", loaded, false);*/
 
   function disableAllButtons(form) {
     var buttons = form.querySelectorAll("button");
@@ -102,4 +102,33 @@
       buttons[i].disabled = true;
     }
   }
+  
+  
+  
+  $("form[name='contact-form']").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 5
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    // Specify validation error messages
+    messages: {
+      name: {
+        required: "Por favor proporcione su nombre",
+        minlength: "Su nombre debe tener al menos 5 caracteres"
+      },
+      email: "Por favor porpocione un correo válido"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form,event) {
+      //form.submit();
+      handleFormSubmit(event);
+    }
+  });
 })();

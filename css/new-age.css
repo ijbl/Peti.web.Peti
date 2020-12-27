@@ -169,6 +169,9 @@
   --peti-color-picker-wheel-size: 250px;
 
   --peti-icon-slot-margin: 20px;
+  
+  /* All delay classes will take half the time to start */
+  --animate-delay: 0.4s;
 }
 
 html,
@@ -781,4 +784,68 @@ section.contact .container p {
     color: white;
 }
 
+#welcome-title {
+  margin: .2em 0;
+  line-height:1.4;
+}
 
+.panda-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+@media screen and (min-width: 992px) {
+  .panda-container {
+    width: 80%;
+  }
+} 
+
+#panda{
+  width: 28%;
+}
+
+
+/* form validation styles*/
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+input.error {
+  background: #ffcbd9; 
+  border: 1px solid #c51244 !important; 
+  color: #c51244;
+}
+
+label.error {
+  /*font-family: "Open Sans";
+  font-size: 14px;
+  color: #FC0A1A;//#ff0000;*/
+  
+  /*color: #cc0033;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-shadow: 1px 1px rgba(250,250,250,.3);*/
+  
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #c51244 !important;
+  padding: 5px !important;
+  border-radius: 0 !important;
+  position: relative; 
+  //display: inline-block !important;
+  box-shadow: 1px 1px 1px #aaaaaa;
+  margin-top: 10px !important;
+}
+
+label.error:before{
+  content: '';  
+  width: 0;  
+  height: 0;  
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #c51244;
+  position: absolute;  
+  top: -10px; 
+}
