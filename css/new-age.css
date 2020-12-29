@@ -805,3 +805,31 @@ section.contact .container p {
 #panda{
   width: 28%;
 }
+
+/*terms and conditions and privacy policy styles*/
+
+
+.text-container {
+  background: #fff;
+  margin-top: 94px;
+  //padding: 94px 80px 60px 80px;
+  padding:  60px 80px;
+  -webkit-box-shadow: 2px 8px 20px 0 rgba(0,0,0,0.12);
+  box-shadow: 2px 8px 20px 0 rgba(0,0,0,0.12);
+  width: 100%;
+}
+  
+.text-container p {
+  font-size: 16px;
+  line-height: 1.6em ;
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: rgba(0,0,0,0.87);
+  //scroll-behavior: smooth;
+}
+
+.entry-title {
+ text-align: center;
+}

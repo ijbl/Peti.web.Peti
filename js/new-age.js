@@ -135,7 +135,7 @@
   
   
   //modales
-  $('#aviso-privacidad').on('click', function(e){
+  /*$('#aviso-privacidad').on('click', function(e){
     e.preventDefault();
     $('#modal-title').replaceWith( '<span id="modal-title">Aviso de Privacidad</span>' );
     $('#modal-long').modal('show').find('.modal-body').load($(this).attr('href'));
@@ -145,7 +145,7 @@
     e.preventDefault();
     $('#modal-title').replaceWith( '<span id="modal-title">Términos y Condiciones</span>' );
     $('#modal-long').modal('show').find('.modal-body').load($(this).attr('href'));
-  });
+  });*/
   
   
   /*$("input[required], select[required]").attr("oninvalid", "this.setCustomValidity('¡Campo obligatorio!')");
