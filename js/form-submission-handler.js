@@ -111,6 +111,10 @@
         required: true,
         minlength: 5
       },
+      message: {
+        required: true,
+        minlength: 10
+      },
       email: {
         required: true,
         email: true
@@ -121,6 +125,10 @@
       name: {
         required: "Por favor proporcione su nombre",
         minlength: "Su nombre debe tener al menos 5 caracteres"
+      },
+      message: {
+        required: "Por favor proporcione un mensaje",
+        minlength: "Su mensaje debe tener al menos 10 caracteres"
       },
       email: "Por favor porpocione un correo válido"
     },

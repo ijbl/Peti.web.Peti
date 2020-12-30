@@ -70,7 +70,7 @@ label span {
   color: #c51244;
 }*/
 
-.pure-form input.error {
+.pure-form input.error, .pure-form textarea.error {
     color: #b94a48;
     border-color: #e9322d;
     background: #ffcbd9 !important; 
@@ -99,7 +99,7 @@ label.error {
   margin-top: 10px !important;
 }
 
-label.error:before{
+label.error:before, textarea.error:before{
   content: '';  
   width: 0;  
   height: 0;  
