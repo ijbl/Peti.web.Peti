@@ -700,7 +700,13 @@ div.container-wave {
 .site-description {
     color: #757575;//#989aa2;
     font-family: var(--font-base, "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif);
-  font-size: 1.25rem;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-description {
+    font-size: 1.25rem;
+  }
 }
 
 .has-foreground-dark-color {

@@ -1,0 +1,16 @@
+header.masthead {
+    position: absolute;
+}
+
+section.doc-container {
+    padding: 10px 0;
+}
+
+.text-container {
+    padding: 10px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-container {
+    padding: 60px 80px;
+}
