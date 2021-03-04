@@ -19,18 +19,32 @@
       console.log('button type: '+ button);
       //alert(event.target.getAttribute('id'));
       
+      
       //apple store
-      var url ='https://apps.apple.com/app/apple-store/id553834731';
+      var url ='https://apps.apple.com/us/app/peti/id1540008636';
       if(button == 1){//google play
-        url = 'https://play.google.com/store/apps/details?id=com.king.candycrushsaga&referrer=af_tranid%3Dcid911-1609272921172-3844%26utm_source%3DKingWeb%26utm_campaign%3D%26utm_content%3D';
+        url = 'https://play.google.com/store/apps/details?id=com.iam.peti';
       }
       
+      /*switch (button) {
+        case 1: //google-play
+          url = 'https://play.google.com/store/apps/details?id=com.iam.peti';
+          break;
+        case 2: //apple store
+          url ='https://apps.apple.com/us/app/peti/id1540008636';
+        case 3: //from facebook web
+          url = 'http://www.peti-app.com'
+      }*/
+      
       if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-        url = 'http://play.google.com/store/apps/details?id=com.truecaller&hl=en';
+        url = 'https://play.google.com/store/apps/details?id=com.iam.peti';
       }
-      if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
-        url = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
+      else if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
+        url = 'https://apps.apple.com/us/app/peti/id1540008636';
+      }else if (button == 3){ //web facebook
+        url = 'http://www.peti-app.com'
       }
+  
       window.location.href = url;
       //window.open(url, '_blank');
     });
