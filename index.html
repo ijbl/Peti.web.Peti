@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Ayuda a animales necesitados.">
   <meta name="author" content="">
-  
+
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://www.peti-app.com/">
   <meta property="og:type" content="website">
@@ -96,9 +96,9 @@
           <div class="panda-container">
             <img src="img/petiPanda.svg" alt="Peti Logo" id="panda">
           </div>
-          
+
           <div class="header-content mx-auto ">
-            
+
             <div id="peti-description-container">
               <h1 class="has-foreground-dark-color" id="welcome-title">Bienvenido a Peti</h1>
               <p style="font-size:18px;line-height:1.6;">Peti es una aplicación móvil gratuita en la que puedes ayudar a animales necesitados. Crea reportes, realiza búsquedas, guárdalas y recibe notificaciones de nuevos resultados.</p>
@@ -286,7 +286,8 @@
           <div class="container-form">
             <!-- START HERE -->
 
-            <form class="gform pure-form pure-form-stacked" method="POST" action="https://script.google.com/macros/s/AKfycby9OHaEwl6FtUWIqH_aHLMouYZbnwCFYvPFXoSlGQ/exec" name="contact-form">
+            <form class="gform pure-form pure-form-stacked" method="POST"
+              action="https://script.google.com/macros/s/AKfycby9OHaEwl6FtUWIqH_aHLMouYZbnwCFYvPFXoSlGQ/exec" name="contact-form">
               <!-- change the form action to your script url -->
 
               <div class="form-elements">
@@ -311,6 +312,8 @@
                   <input id="ohnopot" type="text" name="ohnopot" value="" />
                 </fieldset>
 
+                <div class="g-recaptcha" data-sitekey="6LdIU84dAAAAADSolsgsP6gS7fU1dgAzmrD5DvWM"></div>
+                <br/>
                 <button class="button-success pure-button button-xlarge">
                   <i class="fa fa-paper-plane"></i>&nbsp;Enviar</button>
               </div>
@@ -379,7 +382,7 @@
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  
+
   <!-- jquery validation -->
   <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 
@@ -389,5 +392,7 @@
 
   <!-- Submit the Form to Google Using "AJAX" -->
   <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body></html>
