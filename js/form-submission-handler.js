@@ -24,7 +24,7 @@
     var formData = {};
     fields.forEach(function(name){
       var element = elements[name];
-      
+
       // singular form elements just have one value
       formData[name] = element.value;
 
@@ -86,7 +86,7 @@
     }).join('&');
     xhr.send(encoded);
   }
-  
+
   /*function loaded() {
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
@@ -102,9 +102,9 @@
       buttons[i].disabled = true;
     }
   }
-  
-  
-  
+
+
+
   $("form[name='contact-form']").validate({
     rules: {
       name: {
@@ -118,6 +118,9 @@
       email: {
         required: true,
         email: true
+      },
+      grecaptcha: {
+        required: true
       }
     },
     // Specify validation error messages
@@ -130,7 +133,10 @@
         required: "Por favor proporcione un mensaje",
         minlength: "Su mensaje debe tener al menos 10 caracteres"
       },
-      email: "Por favor porpocione un correo válido"
+      email: "Por favor porpocione un correo válido",
+      grecaptcha: {
+        required: "Por favor, resuelve el CAPTCHA para continuar"
+      }
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
