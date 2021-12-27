@@ -118,9 +118,6 @@
       email: {
         required: true,
         email: true
-      },
-      grecaptcha: {
-        required: true
       }
     },
     // Specify validation error messages
@@ -133,16 +130,18 @@
         required: "Por favor proporcione un mensaje",
         minlength: "Su mensaje debe tener al menos 10 caracteres"
       },
-      email: "Por favor porpocione un correo válido",
-      grecaptcha: {
-        required: "Por favor, resuelve el CAPTCHA para continuar"
-      }
+      email: "Por favor porpocione un correo válido"
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form,event) {
       //form.submit();
-      handleFormSubmit(event);
+
+      if (grecaptcha.getResponse()) {
+        handleFormSubmit(event);
+      } else {
+        alert('Por favor, resuelve el captcha para continuar.')
+      }
     }
   });
 })();
